@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Pranav Kakde, a software engineer building full-stack, AI, and backend systems."
+    />
+    <title>Pranav Kakde | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Pranav Kakde home">
+        <span>PK</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark theme">
+          <span></span>
+        </button>
+        <a class="header-cta" href="mailto:kakdepranav993@gmail.com">Email</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">Pune, Maharashtra | pranavkakde.dev</p>
+          <h1>Pranav Kakde</h1>
+          <p class="role">Software Engineer</p>
+          <p class="intro">
+            IT undergraduate with hands-on experience building full-stack web
+            applications, RESTful APIs, AI/ML systems, and practical developer
+            tools. I like building products that are clear, scalable, and useful.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button secondary" href="mailto:kakdepranav993@gmail.com">Get in Touch</a>
+          </div>
+          <div class="social-links" aria-label="Social profile links">
+            <a href="https://www.linkedin.com/in/pranav-kakde-351a26205/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/PRANAVKAKDE613" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://leetcode.com/u/PRANAV_KAKDE/" target="_blank" rel="noreferrer">LeetCode</a>
+            <a href="https://www.hackerrank.com/profile/kakdepranav993" target="_blank" rel="noreferrer">HackerRank</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Portrait of Pranav Kakde">
+          <img src="assets/pranav-kakde.jpeg" alt="Pranav Kakde" />
+        </div>
+      </section>
+
+      <section class="stats section compact" aria-label="Profile highlights">
+        <div>
+          <strong data-count="8.7" data-suffix="/10">8.7/10</strong>
+          <span>IT CGPA</span>
+        </div>
+        <div>
+          <strong data-count="200" data-suffix="+">200+</strong>
+          <span>LeetCode problems</span>
+        </div>
+        <div>
+          <strong data-count="15" data-suffix="+">15+</strong>
+          <span>REST endpoints built</span>
+        </div>
+        <div>
+          <strong data-count="92.4" data-suffix="%">92.4%</strong>
+          <span>AI model accuracy</span>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects built across product, backend, and AI.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project featured">
+            <div class="project-topline">
+              <span>Full-stack</span>
+              <a href="https://github.com/PRANAVKAKDE613/Budgetwise" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="project-visual finance" aria-hidden="true">
+              <span class="visual-pill">Auth</span>
+              <span class="bar tall"></span>
+              <span class="bar mid"></span>
+              <span class="bar high"></span>
+              <span class="chart-line"></span>
+            </div>
+            <h3>BudgetWise</h3>
+            <p>
+              Smart personal finance manager with JWT authentication,
+              role-based access, REST APIs, MySQL storage, and Chart.js insights.
+            </p>
+            <ul class="tags">
+              <li>React</li>
+              <li>Spring Boot</li>
+              <li>MySQL</li>
+              <li>JWT</li>
+            </ul>
+          </article>
+
+          <article class="project featured">
+            <div class="project-topline">
+              <span>AI Backend</span>
+              <a href="https://github.com/PRANAVKAKDE613/Unified-LLM-Gateway" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="project-visual gateway" aria-hidden="true">
+              <span class="node active"></span>
+              <span class="connector"></span>
+              <span class="node"></span>
+              <span class="connector"></span>
+              <span class="node warn"></span>
+              <span class="meter"></span>
+            </div>
+            <h3>Unified LLM Gateway</h3>
+            <p>
+              Production-style multi-provider LLM proxy with caching, cost
+              metering, provider fallback, and observability-focused design.
+            </p>
+            <ul class="tags">
+              <li>Python</li>
+              <li>LLM APIs</li>
+              <li>Caching</li>
+              <li>Observability</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-topline">
+              <span>Computer Vision</span>
+              <a href="https://github.com/PRANAVKAKDE613/violence-detection-xai" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="project-visual vision" aria-hidden="true">
+              <span class="scan-frame"></span>
+              <span class="heat heat-one"></span>
+              <span class="heat heat-two"></span>
+              <span class="alert-dot"></span>
+            </div>
+            <h3>Violence Detection with Explainable AI</h3>
+            <p>
+              CNN-LSTM video analysis model with Grad-CAM heatmaps, OpenCV data
+              pipelines, and Telegram-based real-time alerting.
+            </p>
+            <ul class="tags">
+              <li>Python</li>
+              <li>CNN-LSTM</li>
+              <li>Grad-CAM</li>
+              <li>OpenCV</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-topline">
+              <span>Backend</span>
+              <a href="https://github.com/PRANAVKAKDE613/IRCTC-backend" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="project-visual rail" aria-hidden="true">
+              <span class="track"></span>
+              <span class="station"></span>
+              <span class="station"></span>
+              <span class="station active"></span>
+              <span class="ticket">WL</span>
+            </div>
+            <h3>IRCTC Backend</h3>
+            <p>
+              Railway booking backend for train search, booking, cancellation,
+              user authentication, waitlist logic, and fare calculation.
+            </p>
+            <ul class="tags">
+              <li>Java</li>
+              <li>JDBC</li>
+              <li>MySQL</li>
+              <li>Auth</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-topline">
+              <span>AI Product</span>
+              <a href="https://github.com/PRANAVKAKDE613/TechSight" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="project-visual research" aria-hidden="true">
+              <span class="doc-line long"></span>
+              <span class="doc-line"></span>
+              <span class="doc-line short"></span>
+              <span class="spark"></span>
+            </div>
+            <h3>TechSight</h3>
+            <p>
+              AI-powered financial research assistant that analyzes SEC 10-K
+              filings with a multi-agent system and Streamlit interface.
+            </p>
+            <ul class="tags">
+              <li>LangChain</li>
+              <li>Groq</li>
+              <li>Streamlit</li>
+              <li>Python</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-topline">
+              <span>Blockchain</span>
+              <a href="https://github.com/PRANAVKAKDE613/fundchain" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="project-visual chain" aria-hidden="true">
+              <span class="block"></span>
+              <span class="chain-link"></span>
+              <span class="block"></span>
+              <span class="chain-link"></span>
+              <span class="block filled"></span>
+            </div>
+            <h3>FundChain</h3>
+            <p>
+              Decentralized crowdfunding platform using smart contracts for
+              transparent contribution tracking and fund management.
+            </p>
+            <ul class="tags">
+              <li>Solidity</li>
+              <li>Ethereum</li>
+              <li>Web3.js</li>
+              <li>Smart Contracts</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section more-projects">
+        <div class="section-heading narrow">
+          <p class="eyebrow">More Builds</p>
+          <h2>Additional projects from GitHub.</h2>
+        </div>
+        <div class="link-list">
+          <a href="https://github.com/PRANAVKAKDE613/Code-Visualizer" target="_blank" rel="noreferrer">
+            <span>Code Visualizer</span>
+            <small>React algorithm animations</small>
+          </a>
+          <a href="https://github.com/PRANAVKAKDE613/Amazon_Sales_automation_Analysis" target="_blank" rel="noreferrer">
+            <span>Amazon Sales Automation</span>
+            <small>Pandas, Google Sheets API, Django</small>
+          </a>
+          <a href="https://github.com/PRANAVKAKDE613/real-time-drowsiness-detection" target="_blank" rel="noreferrer">
+            <span>Real-time Drowsiness Detection</span>
+            <small>Computer vision and facial landmarks</small>
+          </a>
+          <a href="https://github.com/PRANAVKAKDE613/pneumonia-detection-ai" target="_blank" rel="noreferrer">
+            <span>Pneumonia Detection AI</span>
+            <small>Healthcare AI experiment</small>
+          </a>
+        </div>
+      </section>
+
+      <section id="skills" class="section split">
+        <div class="section-heading sticky">
+          <p class="eyebrow">Technical Range</p>
+          <h2>Tools I use to ship reliable software.</h2>
+        </div>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <p>Python, Java, C, JavaScript, TypeScript</p>
+          </div>
+          <div class="skill-group">
+            <h3>Web & Backend</h3>
+            <p>React, Next.js, Node.js, Express.js, Spring Boot, REST APIs, JWT, HTML, CSS, Tailwind CSS</p>
+          </div>
+          <div class="skill-group">
+            <h3>AI / ML</h3>
+            <p>TensorFlow, PyTorch, Scikit-learn, OpenCV, NLTK, Hugging Face, OpenAI APIs, Grad-CAM</p>
+          </div>
+          <div class="skill-group">
+            <h3>Data & Platforms</h3>
+            <p>MySQL, MongoDB, SQL, NoSQL, Git, GitHub, Linux, Postman, Docker, Vercel, CI/CD</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="journey" class="section split">
+        <div class="section-heading sticky">
+          <p class="eyebrow">Journey</p>
+          <h2>Education, certifications, and community work.</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>2022 - 2026</span>
+            <h3>B.E. in Information Technology</h3>
+            <p>Pimpri Chinchwad College of Engineering and Research, Pune | CGPA: 8.7/10</p>
+          </article>
+          <article>
+            <span>2025</span>
+            <h3>Certifications</h3>
+            <p>Oracle Cloud Infrastructure AI Foundations Associate, Generative AI, Java, Python</p>
+          </article>
+          <article>
+            <span>Club</span>
+            <h3>ACM PCCOER Technical Club</h3>
+            <p>Contributed to design and technology projects while collaborating through Agile-style sprint planning.</p>
+          </article>
+          <article>
+            <span>Achievement</span>
+            <h3>Concept Carnival 2023 | 2nd Place</h3>
+            <p>Built Harvest Hub, an agri-supply chain platform connecting farmers directly to buyers.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something useful.</h2>
+        <p>
+          I'm open to junior software engineer roles, internships, and product
+          engineering opportunities across full-stack, backend, and AI-enabled systems.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:kakdepranav993@gmail.com">kakdepranav993@gmail.com</a>
+          <a class="button secondary" href="https://github.com/PRANAVKAKDE613" target="_blank" rel="noreferrer">GitHub Profile</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>(c) <span id="year"></span> Pranav Kakde</span>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
