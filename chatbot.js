@@ -1,4 +1,64 @@
 (function () {
+  // Embed Grounded Knowledge Base for client-side fallback (on static hosts like GitHub Pages)
+  const KB = {
+    name: "Pranav Kakde",
+    college: "Pimpri Chinchwad College of Engineering and Research (PCCOER), Pune",
+    cgpa: "8.7 / 10",
+    gradYear: "2026",
+    degree: "B.E. in Information Technology",
+    email: "kakdepranav993@gmail.com",
+    linkedin: "https://www.linkedin.com/in/pranav-kakde-351a26205/",
+    github: "https://github.com/PRANAVKAKDE613",
+    leetcode: "200+ problems solved",
+    resumes: {
+      backend: "resumes/Pranav_Kakde_Java_Backend_Resume.pdf",
+      aiml: "resumes/Pranav_Kakde_AIML_GenAI_Resume.pdf"
+    }
+  };
+
+  // Client-Side Grounded Knowledge Base Responder
+  function getGroundedResponse(query) {
+    const q = query.toLowerCase().trim();
+
+    // Greetings
+    if (/^(hi|hello|hey|greetings|hola|hi there|hello there)/.test(q)) {
+      return `Hi there! 👋 I'm Pranav's AI portfolio assistant. I can answer questions about his software engineering background, projects, technical skills, or help you download his resumes. How can I help you today?`;
+    }
+
+    // Resumes
+    if (q.includes("resume") || q.includes("cv") || q.includes("download") || q.includes("profile pdf")) {
+      return `You can download either of Pranav's tailored resumes directly:\n\n📄 [Download Java / Backend Resume](${KB.resumes.backend})\n🤖 [Download AI/ML & GenAI Resume](${KB.resumes.aiml})`;
+    }
+
+    // LangChain / GenAI / AI/ML
+    if (q.includes("langchain") || q.includes("genai") || q.includes("rag") || q.includes("agent") || q.includes("llm") || q.includes("ai/ml") || q.includes("techsight")) {
+      return `Pranav has deep experience in AI/ML & GenAI Engineering! Here are his featured AI projects:\n\n• **TechSight – Agentic Financial Analyst**: Multi-agent system (LangChain, LangGraph, GPT-4o-mini) with ChromaDB & AWS S3. Achieved **94% RAG retrieval accuracy** evaluated via RAGAs.\n• **Unified LLM Gateway**: Multi-provider proxy (FastAPI, Redis) with 2-layer caching (**85% latency cut**).\n• **MedRAG**: Clinical document processing with OCR & FAISS.\n• **FinMCP**: MCP server connecting yFinance & SEC EDGAR to LLM agents.\n• **Violence Detection with XAI**: CNN-LSTM & Grad-CAM computer vision model (**92.4% accuracy**).`;
+    }
+
+    // Spring Boot / Java / Backend
+    if (q.includes("spring") || q.includes("java") || q.includes("backend") || q.includes("full-stack") || q.includes("chat") || q.includes("budgetwise") || q.includes("irctc")) {
+      return `Pranav specializes in Java & Spring Boot Full-Stack Development! His key backend projects include:\n\n• **Real-Time Chat App**: Spring Boot, React, MongoDB, STOMP/SockJS WebSockets supporting **100+ concurrent connections** with sub-50ms message storage.\n• **BudgetWise**: Smart Personal Finance Manager built with Spring Boot, React, MySQL & JWT securing **15+ REST endpoints**.\n• **IRCTC Backend**: ACID-compliant railway reservation system in Java JDBC & MySQL with automated waitlist queueing.\n• **FundChain**: Decentralized Ethereum crowdfunding dApp in Solidity & React.`;
+    }
+
+    // Internship / Experience / Education / CGPA
+    if (q.includes("internship") || q.includes("experience") || q.includes("education") || q.includes("college") || q.includes("cgpa") || q.includes("gpa") || q.includes("acm")) {
+      return `Here is Pranav's academic & extracurricular background:\n\n• **Degree**: B.E. in Information Technology at PCCOER, Pune (Graduating 2026)\n• **CGPA**: **8.7 / 10**\n• **Leadership**: Technical Contributor at ACM PCCOER Technical Club (Agile sprint planning, web development)\n• **Awards**: **2nd Place** at Concept Carnival 2023 for Harvest Hub (agri-supply chain dApp)\n• **Problem Solving**: **200+ LeetCode problems** solved`;
+    }
+
+    // Skills / Languages / Stack
+    if (q.includes("skill") || q.includes("stack") || q.includes("language") || q.includes("tool") || q.includes("python") || q.includes("database")) {
+      return `Pranav's core technical toolkit:\n\n• **Languages**: Java, Python, JavaScript, TypeScript, C, SQL\n• **Backend**: Spring Boot, Spring Security, REST APIs, Microservices, Node.js, Express.js, React.js, WebSockets (STOMP/SockJS)\n• **AI/ML**: LangChain, LangGraph, LLM Agents, RAG, FastAPI, PyTorch, TensorFlow, OpenCV, ChromaDB, FAISS\n• **Cloud & DBs**: MySQL, MongoDB, PostgreSQL, Redis, AWS (S3, Glue, Redshift), Docker, Git`;
+    }
+
+    // Salary / Personal / Contact Redirect
+    if (q.includes("salary") || q.includes("pay") || q.includes("money") || q.includes("personal") || q.includes("contact") || q.includes("hire") || q.includes("email")) {
+      return `I'm strictly grounded in Pranav's technical background, projects, and skills. For hiring discussions, interview scheduling, or salary details, please contact Pranav directly:\n\n📧 **Email**: [kakdepranav993@gmail.com](mailto:kakdepranav993@gmail.com)\n💼 **LinkedIn**: [Pranav Kakde on LinkedIn](${KB.linkedin})`;
+    }
+
+    // Default Grounded Overview
+    return `Pranav Kakde is a final-year B.E. IT student at PCCOER Pune (2026 grad, **8.7 CGPA**) with dual focus in **Java/Spring Boot Backend Development** and **AI/ML Engineering** (LangChain, LLM Agents, RAG).\n\nYou can ask me about his projects (*TechSight, BudgetWise, ChatApp, Unified LLM Gateway*), technical skills, or download his resumes below!`;
+  }
+
   // Inject Chatbot UI HTML
   const chatbotHtml = `
     <div id="ai-chatbot-widget" class="chatbot-widget">
@@ -96,7 +156,6 @@
     if (html) {
       contentDiv.innerHTML = html;
     } else {
-      // Basic markdown parsing for bold & links
       let parsed = text
         .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" class="chat-link">$1</a>')
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
@@ -137,35 +196,42 @@
     input.value = '';
     showTypingIndicator();
 
+    // Small natural response delay
+    await new Promise(resolve => setTimeout(resolve, 400));
+
     try {
-      // Determine endpoint URL (works locally & on Vercel / serverless)
+      // Try API endpoint first if available
       const endpoint = '/api/chat';
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 2500);
+
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userText })
+        body: JSON.stringify({ message: userText }),
+        signal: controller.signal
       });
 
+      clearTimeout(timeoutId);
       removeTypingIndicator();
 
       if (res.ok) {
         const data = await res.json();
-        appendMessage('bot', data.reply || "No response received.");
-      } else {
-        const data = await res.json().catch(() => ({}));
-        appendMessage('bot', data.reply || "Sorry, I ran into an issue connecting to the AI backend. Please email Pranav directly at kakdepranav993@gmail.com!");
+        if (data && data.reply) {
+          appendMessage('bot', data.reply);
+          return;
+        }
       }
+
+      // If backend returns 404 (static GitHub Pages host), use grounded responder fallback
+      const reply = getGroundedResponse(userText);
+      appendMessage('bot', reply);
+
     } catch (err) {
       removeTypingIndicator();
-      console.warn("API Call fallback:", err);
-
-      // Offline / Static fallback response
-      const lower = userText.toLowerCase();
-      let fallback = "Pranav Kakde is a final-year B.E. IT student (2026, 8.7 CGPA) with expertise in Spring Boot, React, and AI/ML (LangChain, RAG). You can download his resumes directly using the hero buttons!";
-      if (lower.includes('resume')) {
-        fallback = "You can download Pranav's resumes right here:\n\n📄 [Download Java/Backend Resume](resumes/Pranav_Kakde_Java_Backend_Resume.pdf)\n🤖 [Download AI/ML & GenAI Resume](resumes/Pranav_Kakde_AIML_GenAI_Resume.pdf)";
-      }
-      appendMessage('bot', fallback);
+      // On static host or network issue, serve instant grounded answer
+      const reply = getGroundedResponse(userText);
+      appendMessage('bot', reply);
     }
   }
 
