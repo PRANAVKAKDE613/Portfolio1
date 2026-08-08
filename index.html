@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio of Pranav Kakde, a software engineer building full-stack, AI, and backend systems."
+      content="Portfolio of Pranav Kakde — Final-Year B.E. IT Student graduating in 2026 specializing in Java/Spring Boot Backend and AI/ML GenAI Engineering."
     />
-    <title>Pranav Kakde | Software Engineer</title>
+    <title>Pranav Kakde | Software Engineer & AI/ML Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,29 +32,32 @@
         <button class="theme-toggle" type="button" aria-label="Toggle dark theme">
           <span></span>
         </button>
-        <a class="header-cta" href="mailto:kakdepranav993@gmail.com">Email</a>
+        <a class="header-cta" href="mailto:kakdepranav993@gmail.com">Email Me</a>
       </div>
     </header>
 
     <main id="top">
       <section class="hero section">
         <div class="hero-copy">
-          <p class="eyebrow">Pune, Maharashtra | pranavkakde.dev</p>
+          <p class="eyebrow">Pune, Maharashtra | B.E. IT Class of 2026</p>
           <h1>Pranav Kakde</h1>
-          <p class="role">Software Engineer</p>
+          <p class="role">Backend / Full-Stack & AI/ML Engineer</p>
           <p class="intro">
-            IT undergraduate with hands-on experience building full-stack web
-            applications, RESTful APIs, AI/ML systems, and practical developer
-            tools. I like building products that are clear, scalable, and useful.
+            Final-year Information Technology undergraduate with dual expertise in 
+            <strong>Java, Spring Boot, Microservices & Full-Stack Web Systems</strong> and 
+            <strong>AI/ML Engineering, LangChain, LLM Agents & RAG Systems</strong>.
           </p>
+          
           <div class="hero-actions">
-            <a class="button primary" href="#projects">View Projects</a>
-            <a class="button secondary" href="mailto:kakdepranav993@gmail.com">Get in Touch</a>
+            <a class="button primary" href="#projects">Explore Selected Projects</a>
+            <a class="button secondary" href="resumes/Pranav_Kakde_Java_Backend_Resume.pdf" target="_blank" download>📄 Java/Backend Resume</a>
+            <a class="button outline" href="resumes/Pranav_Kakde_AIML_GenAI_Resume.pdf" target="_blank" download>🤖 AI/ML Resume</a>
           </div>
+
           <div class="social-links" aria-label="Social profile links">
             <a href="https://www.linkedin.com/in/pranav-kakde-351a26205/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://github.com/PRANAVKAKDE613" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://leetcode.com/u/PRANAV_KAKDE/" target="_blank" rel="noreferrer">LeetCode</a>
+            <a href="https://leetcode.com/u/PRANAV_KAKDE/" target="_blank" rel="noreferrer">LeetCode (200+)</a>
             <a href="https://www.hackerrank.com/profile/kakdepranav993" target="_blank" rel="noreferrer">HackerRank</a>
           </div>
         </div>
@@ -66,157 +69,145 @@
       <section class="stats section compact" aria-label="Profile highlights">
         <div>
           <strong data-count="8.7" data-suffix="/10">8.7/10</strong>
-          <span>IT CGPA</span>
+          <span>IT CGPA (PCCOER)</span>
         </div>
         <div>
-          <strong data-count="200" data-suffix="+">200+</strong>
-          <span>LeetCode problems</span>
+          <strong data-count="94" data-suffix="%">94%</strong>
+          <span>RAG Retrieval Accuracy</span>
         </div>
         <div>
-          <strong data-count="15" data-suffix="+">15+</strong>
-          <span>REST endpoints built</span>
+          <strong data-count="85" data-suffix="%">85%</strong>
+          <span>LLM Proxy Latency Cut</span>
         </div>
         <div>
           <strong data-count="92.4" data-suffix="%">92.4%</strong>
-          <span>AI model accuracy</span>
+          <span>Vision AI Model Accuracy</span>
         </div>
       </section>
 
       <section id="projects" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Projects built across product, backend, and AI.</h2>
+          <p class="eyebrow">Portfolio Work</p>
+          <h2>Featured Engineering Projects</h2>
+          <p class="section-subtext">Filter by technical specialization to inspect system architecture, codebases, and quantified outcomes.</p>
+        </div>
+
+        <div class="project-tabs" role="tablist" aria-label="Project Track Filter">
+          <button class="tab-btn active" data-tab="all" role="tab" aria-selected="true">All Projects (9)</button>
+          <button class="tab-btn" data-tab="backend" role="tab" aria-selected="false">☕ Backend & Full-Stack (4)</button>
+          <button class="tab-btn" data-tab="aiml" role="tab" aria-selected="false">🤖 AI/ML & GenAI (5)</button>
         </div>
 
         <div class="project-grid">
-          <article class="project featured">
+
+          <!-- PROJECT 1: Real-Time Chat App -->
+          <article class="project featured" data-category="backend">
             <div class="project-topline">
-              <span>Full-stack</span>
-              <a href="https://github.com/PRANAVKAKDE613/Budgetwise" target="_blank" rel="noreferrer">GitHub</a>
+              <span class="category-tag backend">Backend & Full-Stack</span>
+              <div class="card-links">
+                <a href="https://github.com/PRANAVKAKDE613/ChatApp" target="_blank" rel="noreferrer" class="link-btn">GitHub</a>
+                <a href="https://chat-app-frontend-seven-eosin.vercel.app" target="_blank" rel="noreferrer" class="link-btn demo">Live Demo ↗</a>
+              </div>
+            </div>
+            <div class="project-visual chat-visual" aria-hidden="true">
+              <span class="bubble left">Hello!</span>
+              <span class="bubble right">STOMP / SockJS</span>
+              <span class="status-indicator online">100+ active</span>
+            </div>
+            <h3>Real-Time Chat Application</h3>
+            <p>
+              Full-stack real-time messaging platform providing instant bi-directional STOMP/SockJS communication over WebSockets, reactive MongoDB persistence, and active presence tracking.
+            </p>
+            <ul class="impact-list">
+              <li>Engineered low-latency bidirectional chat streaming supporting 100+ concurrent socket connections over STOMP/SockJS.</li>
+              <li>Integrated reactive MongoDB persistence layer, delivering sub-50ms message storage and chat history retrieval.</li>
+              <li>Deployed modular React.js user interface featuring live presence indicators and auto-reconnecting socket sessions.</li>
+            </ul>
+            <ul class="tags">
+              <li>Spring Boot</li>
+              <li>React.js</li>
+              <li>MongoDB</li>
+              <li>WebSocket</li>
+              <li>STOMP</li>
+              <li>SockJS</li>
+            </ul>
+          </article>
+
+          <!-- PROJECT 2: BudgetWise -->
+          <article class="project featured" data-category="backend">
+            <div class="project-topline">
+              <span class="category-tag backend">Backend & Full-Stack</span>
+              <div class="card-links">
+                <a href="https://github.com/PRANAVKAKDE613/Budgetwise" target="_blank" rel="noreferrer" class="link-btn">GitHub</a>
+              </div>
             </div>
             <div class="project-visual finance" aria-hidden="true">
-              <span class="visual-pill">Auth</span>
+              <span class="visual-pill">JWT Secured</span>
               <span class="bar tall"></span>
               <span class="bar mid"></span>
               <span class="bar high"></span>
               <span class="chart-line"></span>
             </div>
-            <h3>BudgetWise</h3>
+            <h3>BudgetWise – Smart Personal Finance Manager</h3>
             <p>
-              Smart personal finance manager with JWT authentication,
-              role-based access, REST APIs, MySQL storage, and Chart.js insights.
+              Comprehensive personal financial management application featuring stateless JWT authentication, fine-grained role-based access control (RBAC), transaction tracking, and dynamic visual analytics.
             </p>
+            <ul class="impact-list">
+              <li>Developed stateless RESTful micro-services with Spring Boot and JWT security, securing 15+ API endpoints with RBAC.</li>
+              <li>Engineered relational MySQL database schema with optimized indexing for multi-category transaction analytics.</li>
+              <li>Integrated interactive visual dashboards using React and Chart.js for real-time spending insights.</li>
+            </ul>
             <ul class="tags">
-              <li>React</li>
               <li>Spring Boot</li>
+              <li>React.js</li>
               <li>MySQL</li>
+              <li>REST API</li>
               <li>JWT</li>
+              <li>Chart.js</li>
             </ul>
           </article>
 
-          <article class="project featured">
+          <!-- PROJECT 3: IRCTC Backend -->
+          <article class="project" data-category="backend">
             <div class="project-topline">
-              <span>AI Backend</span>
-              <a href="https://github.com/PRANAVKAKDE613/Unified-LLM-Gateway" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-            <div class="project-visual gateway" aria-hidden="true">
-              <span class="node active"></span>
-              <span class="connector"></span>
-              <span class="node"></span>
-              <span class="connector"></span>
-              <span class="node warn"></span>
-              <span class="meter"></span>
-            </div>
-            <h3>Unified LLM Gateway</h3>
-            <p>
-              Production-style multi-provider LLM proxy with caching, cost
-              metering, provider fallback, and observability-focused design.
-            </p>
-            <ul class="tags">
-              <li>Python</li>
-              <li>LLM APIs</li>
-              <li>Caching</li>
-              <li>Observability</li>
-            </ul>
-          </article>
-
-          <article class="project">
-            <div class="project-topline">
-              <span>Computer Vision</span>
-              <a href="https://github.com/PRANAVKAKDE613/violence-detection-xai" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-            <div class="project-visual vision" aria-hidden="true">
-              <span class="scan-frame"></span>
-              <span class="heat heat-one"></span>
-              <span class="heat heat-two"></span>
-              <span class="alert-dot"></span>
-            </div>
-            <h3>Violence Detection with Explainable AI</h3>
-            <p>
-              CNN-LSTM video analysis model with Grad-CAM heatmaps, OpenCV data
-              pipelines, and Telegram-based real-time alerting.
-            </p>
-            <ul class="tags">
-              <li>Python</li>
-              <li>CNN-LSTM</li>
-              <li>Grad-CAM</li>
-              <li>OpenCV</li>
-            </ul>
-          </article>
-
-          <article class="project">
-            <div class="project-topline">
-              <span>Backend</span>
-              <a href="https://github.com/PRANAVKAKDE613/IRCTC-backend" target="_blank" rel="noreferrer">GitHub</a>
+              <span class="category-tag backend">Backend & Full-Stack</span>
+              <div class="card-links">
+                <a href="https://github.com/PRANAVKAKDE613/IRCTC-backend" target="_blank" rel="noreferrer" class="link-btn">GitHub</a>
+              </div>
             </div>
             <div class="project-visual rail" aria-hidden="true">
               <span class="track"></span>
               <span class="station"></span>
               <span class="station"></span>
               <span class="station active"></span>
-              <span class="ticket">WL</span>
+              <span class="ticket">ACID Queue</span>
             </div>
-            <h3>IRCTC Backend</h3>
+            <h3>IRCTC Backend – Railway Ticket Booking System</h3>
             <p>
-              Railway booking backend for train search, booking, cancellation,
-              user authentication, waitlist logic, and fare calculation.
+              Enterprise-grade railway reservation backend handling train scheduling, seat allocation workflows, dynamic waitlist management, automated queue ordering, and multi-tier fare calculation.
             </p>
+            <ul class="impact-list">
+              <li>Designed ACID-compliant transaction manager handling concurrent seat reservations and automated waitlist priority queues.</li>
+              <li>Implemented multi-tier fare calculation algorithm and train route lookup using optimized MySQL queries.</li>
+              <li>Enforced role-based authentication separating administrator capabilities from passenger management actions.</li>
+            </ul>
             <ul class="tags">
               <li>Java</li>
               <li>JDBC</li>
               <li>MySQL</li>
+              <li>REST API</li>
               <li>Auth</li>
             </ul>
           </article>
 
-          <article class="project">
+          <!-- PROJECT 4: FundChain -->
+          <article class="project" data-category="backend">
             <div class="project-topline">
-              <span>AI Product</span>
-              <a href="https://github.com/PRANAVKAKDE613/TechSight" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-            <div class="project-visual research" aria-hidden="true">
-              <span class="doc-line long"></span>
-              <span class="doc-line"></span>
-              <span class="doc-line short"></span>
-              <span class="spark"></span>
-            </div>
-            <h3>TechSight</h3>
-            <p>
-              AI-powered financial research assistant that analyzes SEC 10-K
-              filings with a multi-agent system and Streamlit interface.
-            </p>
-            <ul class="tags">
-              <li>LangChain</li>
-              <li>Groq</li>
-              <li>Streamlit</li>
-              <li>Python</li>
-            </ul>
-          </article>
-
-          <article class="project">
-            <div class="project-topline">
-              <span>Blockchain</span>
-              <a href="https://github.com/PRANAVKAKDE613/fundchain" target="_blank" rel="noreferrer">GitHub</a>
+              <span class="category-tag backend">Backend & Full-Stack</span>
+              <div class="card-links">
+                <a href="https://github.com/PRANAVKAKDE613/fundchain" target="_blank" rel="noreferrer" class="link-btn">GitHub</a>
+                <a href="https://fundchain-orcin.vercel.app" target="_blank" rel="noreferrer" class="link-btn demo">Live Demo ↗</a>
+              </div>
             </div>
             <div class="project-visual chain" aria-hidden="true">
               <span class="block"></span>
@@ -225,119 +216,294 @@
               <span class="chain-link"></span>
               <span class="block filled"></span>
             </div>
-            <h3>FundChain</h3>
+            <h3>FundChain – Decentralized Crowdfunding Platform</h3>
             <p>
-              Decentralized crowdfunding platform using smart contracts for
-              transparent contribution tracking and fund management.
+              Trustless decentralized crowdfunding platform leveraging Ethereum smart contracts for transparent milestone-based campaign creation, contribution tracking, and automated fund releases.
             </p>
+            <ul class="impact-list">
+              <li>Authored and tested Ethereum smart contracts in Solidity for trustless milestone-based fund releasing.</li>
+              <li>Integrated Web3.js with MetaMask wallet authentication and dynamic React frontend for live campaign state updates.</li>
+            </ul>
             <ul class="tags">
               <li>Solidity</li>
               <li>Ethereum</li>
               <li>Web3.js</li>
+              <li>React.js</li>
               <li>Smart Contracts</li>
             </ul>
           </article>
+
+          <!-- PROJECT 5: TechSight -->
+          <article class="project featured" data-category="aiml">
+            <div class="project-topline">
+              <span class="category-tag aiml">AI/ML & GenAI</span>
+              <div class="card-links">
+                <a href="https://github.com/PRANAVKAKDE613/TechSight" target="_blank" rel="noreferrer" class="link-btn">GitHub</a>
+                <a href="https://techsight-financial-analyst.streamlit.app" target="_blank" rel="noreferrer" class="link-btn demo">Live App ↗</a>
+              </div>
+            </div>
+            <div class="project-visual research" aria-hidden="true">
+              <span class="doc-line long"></span>
+              <span class="doc-line"></span>
+              <span class="doc-line short"></span>
+              <span class="spark">94% RAG</span>
+            </div>
+            <h3>TechSight – Agentic Financial Research Analyst</h3>
+            <p>
+              Autonomous multi-agent financial research assistant that ingests SEC 10-K filings, executes multi-step financial ratio analysis, retrieves relevant disclosures via vector search, and measures response quality.
+            </p>
+            <ul class="impact-list">
+              <li>Built a multi-agent LangGraph workflow reducing financial report analysis time from hours to under 30 seconds.</li>
+              <li>Optimized vector retrieval using ChromaDB & AWS S3 with LoRA fine-tuning, achieving 94% retrieval accuracy and near-zero hallucination rate evaluated via RAGAs.</li>
+              <li>Delivered interactive research interface allowing custom query execution over complex financial SEC 10-K filings.</li>
+            </ul>
+            <ul class="tags">
+              <li>LangChain</li>
+              <li>LangGraph</li>
+              <li>GPT-4o-mini</li>
+              <li>AWS S3</li>
+              <li>ChromaDB</li>
+              <li>LoRA</li>
+              <li>RAGAs</li>
+            </ul>
+          </article>
+
+          <!-- PROJECT 6: Unified LLM Gateway -->
+          <article class="project featured" data-category="aiml">
+            <div class="project-topline">
+              <span class="category-tag aiml">AI/ML & GenAI</span>
+              <div class="card-links">
+                <a href="https://github.com/PRANAVKAKDE613/Unified-LLM-Gateway" target="_blank" rel="noreferrer" class="link-btn">GitHub</a>
+              </div>
+            </div>
+            <div class="project-visual gateway" aria-hidden="true">
+              <span class="node active"></span>
+              <span class="connector"></span>
+              <span class="node"></span>
+              <span class="connector"></span>
+              <span class="node warn"></span>
+              <span class="meter">-85% Latency</span>
+            </div>
+            <h3>Unified LLM Gateway – Production-Grade AI Proxy Service</h3>
+            <p>
+              High-performance multi-provider LLM proxy service featuring standard OpenAI API shape compatibility, two-layer caching (exact SHA-256 and semantic cosine similarity), provider fallback routing, and token cost metering.
+            </p>
+            <ul class="impact-list">
+              <li>Implemented two-layer caching (exact SHA-256 and semantic cosine similarity threshold 0.92 in Redis), reducing API latency by up to 85% for repeat queries.</li>
+              <li>Built automatic provider failover and budget-enforcing token cost metering across OpenAI, Anthropic, and Groq endpoints.</li>
+              <li>Exposed Prometheus metrics and Grafana dashboards for real-time throughput, error rate, and token spending analytics.</li>
+            </ul>
+            <ul class="tags">
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>Redis</li>
+              <li>PostgreSQL</li>
+              <li>Prometheus</li>
+              <li>Grafana</li>
+              <li>Docker</li>
+            </ul>
+          </article>
+
+          <!-- PROJECT 7: MedRAG -->
+          <article class="project" data-category="aiml">
+            <div class="project-topline">
+              <span class="category-tag aiml">AI/ML & GenAI</span>
+              <div class="card-links">
+                <a href="https://github.com/PRANAVKAKDE613/MedRag" target="_blank" rel="noreferrer" class="link-btn">GitHub</a>
+              </div>
+            </div>
+            <div class="project-visual med-visual" aria-hidden="true">
+              <span class="med-cross">+</span>
+              <span class="doc-badge">OCR Ingest</span>
+            </div>
+            <h3>MedRAG – Modular Medical Document Processing Service</h3>
+            <p>
+              Retrieval-Augmented Generation (RAG) system specialized for clinical & medical document QA, processing PDF/DOCX/TXT files with strict context constraint to prevent medical hallucinations.
+            </p>
+            <ul class="impact-list">
+              <li>Built an end-to-end medical document ingestion pipeline supporting PDF/DOCX/TXT files using OCR and hybrid retrieval (FAISS/ChromaDB).</li>
+              <li>Enforced strict context-constrained prompt boundaries, eliminating external knowledge hallucination on medical queries.</li>
+              <li>Integrated AWS Glue and SQL data transformation pipelines to structure unstructured clinical data.</li>
+            </ul>
+            <ul class="tags">
+              <li>LangChain</li>
+              <li>OpenAI APIs</li>
+              <li>AWS Glue</li>
+              <li>ChromaDB</li>
+              <li>SQL</li>
+              <li>OCR</li>
+              <li>FAISS</li>
+            </ul>
+          </article>
+
+          <!-- PROJECT 8: FinMCP -->
+          <article class="project" data-category="aiml">
+            <div class="project-topline">
+              <span class="category-tag aiml">AI/ML & GenAI</span>
+              <div class="card-links">
+                <a href="https://github.com/PRANAVKAKDE613/FinMCP" target="_blank" rel="noreferrer" class="link-btn">GitHub</a>
+              </div>
+            </div>
+            <div class="project-visual mcp-visual" aria-hidden="true">
+              <span class="mcp-node">MCP Tool</span>
+              <span class="mcp-conn"></span>
+              <span class="mcp-node">Redshift</span>
+            </div>
+            <h3>FinMCP – MCP Server for Real-Time Financial Intelligence</h3>
+            <p>
+              Model Context Protocol (MCP) server delivering real-time financial market data, SEC filings, and data warehouse integration directly to LLM agent orchestrators.
+            </p>
+            <ul class="impact-list">
+              <li>Developed an MCP-compliant tool server integrating yFinance and SEC EDGAR APIs for agentic market intelligence retrieval.</li>
+              <li>Connected Amazon S3 and Redshift data warehouses to serve historical stock metrics and SEC 10-K/10-Q financial statements.</li>
+              <li>Standardized JSON-RPC protocol interfaces allowing seamless tool consumption by LangChain/LangGraph agent runtimes.</li>
+            </ul>
+            <ul class="tags">
+              <li>LangChain</li>
+              <li>FastAPI</li>
+              <li>Amazon S3</li>
+              <li>Amazon Redshift</li>
+              <li>SEC EDGAR</li>
+              <li>yFinance</li>
+            </ul>
+          </article>
+
+          <!-- PROJECT 9: Violence Detection with XAI -->
+          <article class="project" data-category="aiml">
+            <div class="project-topline">
+              <span class="category-tag aiml">AI/ML & GenAI</span>
+              <div class="card-links">
+                <a href="https://github.com/PRANAVKAKDE613/violence-detection-xai" target="_blank" rel="noreferrer" class="link-btn">GitHub</a>
+              </div>
+            </div>
+            <div class="project-visual vision" aria-hidden="true">
+              <span class="scan-frame"></span>
+              <span class="heat heat-one"></span>
+              <span class="heat heat-two"></span>
+              <span class="alert-dot">92.4%</span>
+            </div>
+            <h3>Violence Detection with Explainable AI</h3>
+            <p>
+              Computer vision deep learning system for automated video surveillance violence detection featuring Grad-CAM explainability heatmaps and automated Telegram incident alerting.
+            </p>
+            <ul class="impact-list">
+              <li>Achieved 92.4% detection accuracy on surveillance video clips using MobileNetV2 spatial feature extractor + LSTM temporal modeling.</li>
+              <li>Integrated Grad-CAM explainable AI heatmaps to visually highlight regions triggering high-confidence violence predictions.</li>
+              <li>Implemented real-time video stream ingestion via OpenCV with automated Telegram bot alert notifications.</li>
+            </ul>
+            <ul class="tags">
+              <li>Python</li>
+              <li>CNN-LSTM</li>
+              <li>Grad-CAM</li>
+              <li>OpenCV</li>
+              <li>Telegram API</li>
+              <li>MobileNetV2</li>
+            </ul>
+          </article>
+
         </div>
       </section>
 
       <section class="section more-projects">
         <div class="section-heading narrow">
-          <p class="eyebrow">More Builds</p>
-          <h2>Additional projects from GitHub.</h2>
+          <p class="eyebrow">Additional Builds</p>
+          <h2>More Repositories & Prototypes</h2>
         </div>
         <div class="link-list">
+          <a href="https://github.com/PRANAVKAKDE613/real-time-drowsiness-detection" target="_blank" rel="noreferrer">
+            <span>Real-time Drowsiness Detection System</span>
+            <small>Computer vision & facial landmark fatigue alerting (Python, OpenCV)</small>
+          </a>
           <a href="https://github.com/PRANAVKAKDE613/Code-Visualizer" target="_blank" rel="noreferrer">
-            <span>Code Visualizer</span>
-            <small>React algorithm animations</small>
+            <span>AI Code Visualizer</span>
+            <small>Interactive algorithm animation platform (React.js, JavaScript)</small>
           </a>
           <a href="https://github.com/PRANAVKAKDE613/Amazon_Sales_automation_Analysis" target="_blank" rel="noreferrer">
-            <span>Amazon Sales Automation</span>
-            <small>Pandas, Google Sheets API, Django</small>
+            <span>Amazon Sales Automation & Analysis</span>
+            <small>Automated KPI extraction & Google Sheets API pipeline (Pandas, Django)</small>
           </a>
-          <a href="https://github.com/PRANAVKAKDE613/real-time-drowsiness-detection" target="_blank" rel="noreferrer">
-            <span>Real-time Drowsiness Detection</span>
-            <small>Computer vision and facial landmarks</small>
-          </a>
-          <a href="https://github.com/PRANAVKAKDE613/pneumonia-detection-ai" target="_blank" rel="noreferrer">
-            <span>Pneumonia Detection AI</span>
-            <small>Healthcare AI experiment</small>
+          <a href="https://github.com/PRANAVKAKDE613/Face-Detection-And-Recognition" target="_blank" rel="noreferrer">
+            <span>Face Detection & Recognition</span>
+            <small>Real-time LBPH facial identification system (Python, OpenCV)</small>
           </a>
         </div>
       </section>
 
       <section id="skills" class="section split">
         <div class="section-heading sticky">
-          <p class="eyebrow">Technical Range</p>
-          <h2>Tools I use to ship reliable software.</h2>
+          <p class="eyebrow">Technical Capabilities</p>
+          <h2>Core Engineering Stack</h2>
         </div>
         <div class="skill-groups">
           <div class="skill-group">
             <h3>Languages</h3>
-            <p>Python, Java, C, JavaScript, TypeScript</p>
+            <p>Java, Python, JavaScript, TypeScript, C, SQL, HTML5, CSS3</p>
           </div>
           <div class="skill-group">
-            <h3>Web & Backend</h3>
-            <p>React, Next.js, Node.js, Express.js, Spring Boot, REST APIs, JWT, HTML, CSS, Tailwind CSS</p>
+            <h3>Backend & Full-Stack</h3>
+            <p>Spring Boot, Spring Security, Hibernate/JPA, RESTful APIs, Microservices, Node.js, Express.js, React.js, Next.js, WebSockets (STOMP/SockJS), JDBC</p>
           </div>
           <div class="skill-group">
-            <h3>AI / ML</h3>
-            <p>TensorFlow, PyTorch, Scikit-learn, OpenCV, NLTK, Hugging Face, OpenAI APIs, Grad-CAM</p>
+            <h3>AI / ML & GenAI</h3>
+            <p>LangChain, LangGraph, LLM Agents, RAG, RAGAs, Fine-Tuning (LoRA), Vector DBs (ChromaDB, FAISS, Pinecone), FastAPI, PyTorch, TensorFlow, OpenCV, Grad-CAM, Hugging Face</p>
           </div>
           <div class="skill-group">
-            <h3>Data & Platforms</h3>
-            <p>MySQL, MongoDB, SQL, NoSQL, Git, GitHub, Linux, Postman, Docker, Vercel, CI/CD</p>
+            <h3>Cloud, Databases & DevOps</h3>
+            <p>MySQL, MongoDB, PostgreSQL, Redis, AWS (S3, Glue, Redshift), Docker, Prometheus, Grafana, Git, GitHub Actions, Vercel, Linux, Postman</p>
           </div>
         </div>
       </section>
 
       <section id="journey" class="section split">
         <div class="section-heading sticky">
-          <p class="eyebrow">Journey</p>
-          <h2>Education, certifications, and community work.</h2>
+          <p class="eyebrow">Background</p>
+          <h2>Education & Achievements</h2>
         </div>
         <div class="timeline">
           <article>
             <span>2022 - 2026</span>
             <h3>B.E. in Information Technology</h3>
-            <p>Pimpri Chinchwad College of Engineering and Research, Pune | CGPA: 8.7/10</p>
+            <p>Pimpri Chinchwad College of Engineering and Research (PCCOER), Pune | <strong>CGPA: 8.7 / 10</strong></p>
           </article>
           <article>
             <span>2025</span>
             <h3>Certifications</h3>
-            <p>Oracle Cloud Infrastructure AI Foundations Associate, Generative AI, Java, Python</p>
+            <p>Oracle Cloud Infrastructure (OCI) AI Foundations Associate, Generative AI & LLM Engineering, Java & Python Development.</p>
           </article>
           <article>
-            <span>Club</span>
+            <span>Leadership</span>
             <h3>ACM PCCOER Technical Club</h3>
-            <p>Contributed to design and technology projects while collaborating through Agile-style sprint planning.</p>
+            <p>Technical contributor collaborating in Agile sprint planning, building web systems, and mentoring junior developers.</p>
           </article>
           <article>
-            <span>Achievement</span>
+            <span>Award</span>
             <h3>Concept Carnival 2023 | 2nd Place</h3>
-            <p>Built Harvest Hub, an agri-supply chain platform connecting farmers directly to buyers.</p>
+            <p>Awarded 2nd place for building Harvest Hub, a direct agri-supply chain connection platform for farmers.</p>
           </article>
         </div>
       </section>
 
       <section id="contact" class="section contact">
-        <p class="eyebrow">Contact</p>
-        <h2>Let's build something useful.</h2>
+        <p class="eyebrow">Get in Touch</p>
+        <h2>Let's build reliable software together.</h2>
         <p>
-          I'm open to junior software engineer roles, internships, and product
-          engineering opportunities across full-stack, backend, and AI-enabled systems.
+          I'm actively seeking Graduate Software Engineer, Backend Developer, and AI/ML Engineering roles (2026 Batch). 
+          Feel free to reach out via email, LinkedIn, or download my resumes below.
         </p>
-        <div class="hero-actions">
+        <div class="hero-actions contact-actions">
           <a class="button primary" href="mailto:kakdepranav993@gmail.com">kakdepranav993@gmail.com</a>
-          <a class="button secondary" href="https://github.com/PRANAVKAKDE613" target="_blank" rel="noreferrer">GitHub Profile</a>
+          <a class="button secondary" href="resumes/Pranav_Kakde_Java_Backend_Resume.pdf" target="_blank" download>📄 Java/Backend Resume</a>
+          <a class="button outline" href="resumes/Pranav_Kakde_AIML_GenAI_Resume.pdf" target="_blank" download>🤖 AI/ML Resume</a>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <span>(c) <span id="year"></span> Pranav Kakde</span>
+      <span>&copy; <span id="year"></span> Pranav Kakde</span>
       <a href="#top">Back to top</a>
     </footer>
 
     <script src="script.js"></script>
+    <script src="chatbot.js"></script>
   </body>
 </html>

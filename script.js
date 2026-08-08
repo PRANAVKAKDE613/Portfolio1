@@ -98,3 +98,32 @@ window.addEventListener("resize", updateProgress);
 
 updateProgress();
 updateActiveLink();
+
+// Project Tab Filtering Logic
+const tabBtns = document.querySelectorAll(".project-tabs .tab-btn");
+const projects = document.querySelectorAll(".project-grid .project");
+
+tabBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const selectedTab = btn.getAttribute("data-tab");
+
+    tabBtns.forEach((b) => {
+      b.classList.remove("active");
+      b.setAttribute("aria-selected", "false");
+    });
+
+    btn.classList.add("active");
+    btn.setAttribute("aria-selected", "true");
+
+    projects.forEach((card) => {
+      const category = card.getAttribute("data-category");
+      if (selectedTab === "all" || category === selectedTab) {
+        card.style.display = "flex";
+        card.classList.add("is-visible");
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+
