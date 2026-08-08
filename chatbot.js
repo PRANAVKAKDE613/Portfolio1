@@ -1,5 +1,5 @@
 (function () {
-  // Embed Grounded Knowledge Base for client-side fallback (on static hosts like GitHub Pages)
+  // Grounded Knowledge Base for Pranav Kakde
   const KB = {
     name: "Pranav Kakde",
     college: "Pimpri Chinchwad College of Engineering and Research (PCCOER), Pune",
@@ -16,17 +16,17 @@
     }
   };
 
-  // Client-Side Grounded Knowledge Base Responder
+  // Intelligent Grounded Knowledge Base Assistant Engine
   function getGroundedResponse(query) {
     const q = query.toLowerCase().trim();
 
     // Greetings
-    if (/^(hi|hello|hey|greetings|hola|hi there|hello there)/.test(q)) {
-      return `Hi there! 👋 I'm Pranav's AI portfolio assistant. I can answer questions about his software engineering background, projects, technical skills, or help you download his resumes. How can I help you today?`;
+    if (/^(hi|hello|hey|greetings|hola|hi there|hello there|good morning|good afternoon)/.test(q)) {
+      return `Hi there! 👋 I'm Pranav's AI portfolio assistant. I can answer questions about his software engineering background, projects, technical skills, or help you download his resumes. What would you like to know?`;
     }
 
     // Resumes
-    if (q.includes("resume") || q.includes("cv") || q.includes("download") || q.includes("profile pdf")) {
+    if (q.includes("resume") || q.includes("cv") || q.includes("download") || q.includes("pdf")) {
       return `You can download either of Pranav's tailored resumes directly:\n\n📄 [Download Java / Backend Resume](${KB.resumes.backend})\n🤖 [Download AI/ML & GenAI Resume](${KB.resumes.aiml})`;
     }
 
@@ -41,7 +41,7 @@
     }
 
     // Internship / Experience / Education / CGPA
-    if (q.includes("internship") || q.includes("experience") || q.includes("education") || q.includes("college") || q.includes("cgpa") || q.includes("gpa") || q.includes("acm")) {
+    if (q.includes("internship") || q.includes("experience") || q.includes("education") || q.includes("college") || q.includes("cgpa") || q.includes("gpa") || q.includes("acm") || q.includes("project")) {
       return `Here is Pranav's academic & extracurricular background:\n\n• **Degree**: B.E. in Information Technology at PCCOER, Pune (Graduating 2026)\n• **CGPA**: **8.7 / 10**\n• **Leadership**: Technical Contributor at ACM PCCOER Technical Club (Agile sprint planning, web development)\n• **Awards**: **2nd Place** at Concept Carnival 2023 for Harvest Hub (agri-supply chain dApp)\n• **Problem Solving**: **200+ LeetCode problems** solved`;
     }
 
@@ -146,23 +146,19 @@
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
   }
 
-  function appendMessage(sender, text, html = null) {
+  function appendMessage(sender, text) {
     const msgDiv = document.createElement('div');
     msgDiv.className = `chat-message ${sender}`;
 
     const contentDiv = document.createElement('div');
     contentDiv.className = 'message-content';
 
-    if (html) {
-      contentDiv.innerHTML = html;
-    } else {
-      let parsed = text
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" class="chat-link">$1</a>')
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\n/g, '<br/>');
-      contentDiv.innerHTML = parsed;
-    }
+    let parsed = text
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" class="chat-link">$1</a>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\n/g, '<br/>');
 
+    contentDiv.innerHTML = parsed;
     msgDiv.appendChild(contentDiv);
     messagesContainer.appendChild(msgDiv);
     scrollToBottom();
@@ -196,16 +192,25 @@
     input.value = '';
     showTypingIndicator();
 
-    // Small natural response delay
-    await new Promise(resolve => setTimeout(resolve, 400));
+    // Natural typing delay for realistic interaction
+    await new Promise(resolve => setTimeout(resolve, 350));
 
+    // Check host environment: GitHub Pages is a static host where POST to /api/chat is not supported.
+    const isStaticHost = window.location.hostname.includes('github.io') || !window.location.hostname.includes('vercel.app');
+
+    if (isStaticHost) {
+      removeTypingIndicator();
+      const reply = getGroundedResponse(userText);
+      appendMessage('bot', reply);
+      return;
+    }
+
+    // On Vercel / serverless host, call /api/chat API
     try {
-      // Try API endpoint first if available
-      const endpoint = '/api/chat';
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 2500);
+      const timeoutId = setTimeout(() => controller.abort(), 3000);
 
-      const res = await fetch(endpoint, {
+      const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userText }),
@@ -223,13 +228,11 @@
         }
       }
 
-      // If backend returns 404 (static GitHub Pages host), use grounded responder fallback
+      // Fallback if backend API is offline
       const reply = getGroundedResponse(userText);
       appendMessage('bot', reply);
-
     } catch (err) {
       removeTypingIndicator();
-      // On static host or network issue, serve instant grounded answer
       const reply = getGroundedResponse(userText);
       appendMessage('bot', reply);
     }
@@ -240,7 +243,7 @@
     handleSend(input.value);
   });
 
-  // Handle Quick Action Buttons
+  // Quick Action Buttons
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('quick-btn')) {
       const query = e.target.getAttribute('data-query');
